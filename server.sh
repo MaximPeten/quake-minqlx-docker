@@ -23,7 +23,7 @@ fi
 #    +set zmq_stats_port $gameport \
 #    +set sv_tags "$tags"
 
-exec /home/${USER}/steam/steamapps/common/qlds/run_server_x86_minqlx.sh \
+exec /home/${USER}/steam/steamapps/common/qlds/run_server_x64_minqlx.sh \
 +set net_strict 1 \
 +set net_port $gameport \
 +set sv_hostname "My Quake Live Server #$servernum" \

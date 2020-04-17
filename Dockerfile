@@ -45,7 +45,7 @@ RUN python3.5 -m pip install -r ql/minqlx-plugins/requirements.txt
 
 USER root
 RUN chown -R quake:quake ql/
-USER quake
+#USER quake
 
 EXPOSE 27960 28960
 
