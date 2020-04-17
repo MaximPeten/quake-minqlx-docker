@@ -1,11 +1,14 @@
 version: '3.7'
 
+volumes:
+  redis: {}
+
 services:
   redis:
     image: redis:latest
     container_name: redis
     volumes:
-    - ./ql-redis:/data
+    - redis:/data
     networks:
       - quake-network
 
