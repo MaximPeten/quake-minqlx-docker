@@ -26,12 +26,12 @@ fi
 exec /home/${USER}/steam/steamapps/common/qlds/run_server_x64_minqlx.sh \
 +set net_strict 1 \
 +set net_port $gameport \
-+set sv_hostname "My Quake Live Server #$servernum" \
++set sv_hostname "MindK Quake Server #$servernum" \
 +set fs_homepath /home/user/.quakelive/$gameport \
 +set zmq_rcon_enable 1 \
-+set zmq_rcon_password "mypass" \
++set zmq_rcon_password "mindkickers" \
 +set zmq_rcon_port $rconport \
 +set zmq_stats_enable 1 \
-+set zmq_stats_password "mypass" \
++set zmq_stats_password "mindkickers" \
 +set zmq_stats_port $gameport
 
