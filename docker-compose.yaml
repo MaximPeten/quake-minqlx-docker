@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  redis:
+    image: redis:latest
+    container_name: redis
+    volumes:
+    - ./ql-redis:/data
+    networks:
+      - quake-network
+
+  quake-minqlx:
+    image: quake-minqlx
+    container_name: quake-minqlx
+    ports:
+    - 27960:27960
+    environment:
+      - name=MindK_Quake_Server
+      - admin=76561198081069301
+    links:
+      - redis
+    restart: always
+    networks:
+      - quake-network
+
+
+networks:
+  quake-network:
+    driver: bridge
+
