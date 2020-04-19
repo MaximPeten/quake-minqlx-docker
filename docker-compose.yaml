@@ -2,30 +2,31 @@ version: '3.7'
 
 volumes:
   redis: {}
+  quake-data: {}
 
 services:
   redis:
     image: redis:latest
-    container_name: redis
     volumes:
     - redis:/data
     networks:
-      - quake-network
+    - quake-network
 
   quake-minqlx:
-    image: quake-minqlx
-    container_name: quake-minqlx
+    image: quake-test2
     ports:
     - 27960:27960
     environment:
-      - name=MindK_Quake_Server
-      - admin=76561198081069301
-    links:
-      - redis
+      SERVER_HOSTNAME:
+      SERVER_PASSWORD:
+      STEAM_ID:
+      RCON_PASSWORD:
+      STATS_PASSWORD:
+    volumes:
+    - quake-data: {}
     restart: always
     networks:
-      - quake-network
-
+    - quake-network
 
 networks:
   quake-network:
