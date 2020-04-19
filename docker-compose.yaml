@@ -23,7 +23,7 @@ services:
       RCON_PASSWORD:
       STATS_PASSWORD:
     volumes:
-    - quake-data: {}
+    - quake-data:/Steam/steamapps/common/qlds
     restart: always
     networks:
     - quake-network
